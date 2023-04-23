@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <link rel="stylesheet" th:href="@{/form.css}" />
+  <title>Add New Home Quote</title>
+  <script>
+    function showSubmittedPopup() {
+      alert("Quote submitted successfully!");
+    }
+  </script>
+</head>
+<body>
+
+<div class="form-container">
+  <h1>Add New Home Quote</h1>
+  <form action="/homequotes" method="post", onsubmit="showSubmittedPopup()">
+    <label for="quoteId">Quote ID:</label>
+    <input type="number" id="quoteId" name="quoteId" required/><br><br>
+
+    <label for="homeValue">Home Value:</label>
+    <input type="number" id="homeValue" name="homeValue" required/><br><br>
+
+    <label for="homeAge">Home Age:</label>
+    <input type="number" id="homeAge" name="homeAge" required/><br><br>
+
+    <label for="heatingType">Heating Type:</label>
+    <select id="heatingType" name="heatingType" required>
+      <option value="1">Electric</option>
+      <option value="2">Gas</option>
+      <option value="3">Oil</option>
+    </select><br><br>
+
+    <input type="submit" value="Add Quote"/>
+  </form>
+</div>
+</body>
+</html>

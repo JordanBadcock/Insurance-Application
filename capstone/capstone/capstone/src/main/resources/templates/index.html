@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Quotes Calculator</title>
+  <link rel="stylesheet" th:href="@{/mainpage.css}" />
+</head>
+<body>
+<h1>Quotes Calculator</h1>
+<br>
+<form th:action="@{/submit}" method="post">
+  <button type="submit" name="button" value="button1">Add Auto Quote</button>
+  <button type="submit" name="button" value="button2">View Auto Quotes</button>
+  <br>
+  <br>
+  <br>
+  <br>
+  <button type="submit" name="button" value="button3">Add Home Quote</button>
+  <button type="submit" name="button" value="button4">View Home Quotes</button>
+</form>
+</body>
+</html>

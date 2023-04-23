@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Auto Policy Quotes</title>
+    <link rel="stylesheet" th:href="@{/display.css}" />
+</head>
+
+<body>
+<h1>Auto Policy Quotes</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Quote ID</th>
+        <th>Car Value</th>
+        <th>Total Accidents</th>
+        <th>Driver Age</th>
+        <th>Location</th>
+        <th>Quote Total</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Loop through autoPolicyQuotes using Thymeleaf -->
+    <tr th:each="quote : ${autoQuotes}">
+        <td th:text="${quote.quoteId}"></td>
+        <td th:text="${quote.carValue}"></td>
+        <td th:text="${quote.totalAccidents}"></td>
+        <td th:text="${quote.driverAge}"></td>
+        <td th:text="${quote.location}"></td>
+        <td th:text="${quote.quoteTotal}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+
+</html>

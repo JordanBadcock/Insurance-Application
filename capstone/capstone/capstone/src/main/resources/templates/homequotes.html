@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Home Policy Quotes</title>
+  <link rel="stylesheet" th:href="@{/display.css}" />
+</head>
+<body>
+<h1>Home Policy Quotes</h1>
+<table>
+  <thead>
+  <tr>
+    <th>Quote ID</th>
+    <th>Home Value</th>
+    <th>Home Age</th>
+    <th>Heating Type</th>
+    <th>Quote Total</th>
+  </tr>
+  </thead>
+  <tbody>
+  <!-- Loop through homePolicyQuotes using Thymeleaf -->
+  <tr th:each="quote : ${homeQuotes}">
+    <td th:text="${quote.quoteId}"></td>
+    <td th:text="${quote.homeValue}"></td>
+    <td th:text="${quote.homeAge}"></td>
+    <td th:text="${quote.heatingType}"></td>
+    <td th:text="${quote.quoteTotal}"></td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>
